@@ -1,5 +1,9 @@
 .DS_Store
 .netlify/
+logs/
 node_modules/
+tests_output/
 
 .env
+*.swp
+*.swo

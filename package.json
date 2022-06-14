@@ -1,10 +1,10 @@
 {
   "name": "middlemarch-react",
-  "type": "module",
   "version": "0.0.1",
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "nightwatch --headless"
   },
   "dependencies": {
     "lowdb": "^3.0.0",
@@ -13,7 +13,11 @@
     "wouter": "^2.7.5"
   },
   "devDependencies": {
+    "chromedriver": "^102.0.0",
+    "geckodriver": "^3.0.1",
     "netlify-cli": "^10.4.0",
-    "vite": "^2.9.9"
+    "nightwatch": "^2.1.8",
+    "vite": "^2.9.9",
+    "vite-plugin-nightwatch": "^0.2.12"
   }
 }

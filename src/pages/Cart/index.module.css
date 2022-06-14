@@ -1,0 +1,61 @@
+.cTitle {
+  margin: initial 1em;
+
+  text-align: center;
+}
+
+.cCardContainer {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.cCardContainer::before {
+  content: attr(data-quantity);
+
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.7rem;
+  height: 1.7rem;
+
+  color: var(--dark-color);
+  background-color: var(--accent-text-color);
+  border-radius: 50%;
+}
+
+.cCard {
+  flex: 1;
+}
+
+.cButton {
+  display: block;
+
+  width: 100%;
+  padding: 1rem 0.5rem;
+
+  font-size: 1rem;
+
+  color: var(--dark-color);
+  background-color: var(--accent-text-color);
+
+  border: none;
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+
+.cButton:first-child {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cEmptyMessage {
+  text-align: center;
+}
