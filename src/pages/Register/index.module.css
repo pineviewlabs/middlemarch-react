@@ -1,0 +1,32 @@
+.cForm {
+  padding: 1rem;
+  max-width: 25rem;
+}
+
+@media screen and (min-width: 425px) {
+  .cForm {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cFormRememberMeCheckbox {
+  margin: 0 0.5rem 0 0;
+}
+
+.cErrorMessage {
+  color: tomato;
+}
+
+.cFormRegisterButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+
+  font-size: 1rem;
+
+  background-color: var(--accent-text-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}

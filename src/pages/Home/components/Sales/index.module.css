@@ -1,0 +1,85 @@
+.cSalesSection {
+  position: relative;
+
+  max-width: 100vw;
+
+  overflow-x: hidden;
+}
+
+.cSalesPosters {
+  display: flex;
+
+  width: max-content;
+
+  transform: translateX(calc(-100vw * var(--active-poster-index, 0)));
+  transition: transform 0.3s;
+}
+
+.cSalesPosterContainer {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100vw;
+}
+
+.cSalesPoster {
+  width: 80%;
+}
+
+.cNavigationButtons {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transform: translateY(calc(-50% - 2rem));
+}
+
+.cNavigationButton {
+  width: 2rem;
+  height: 2rem;
+
+  font-weight: 700;
+
+  fill: var(--light-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cBullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1rem;
+}
+
+.cBullet {
+  padding: 0.5rem 0.25rem;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cBullet::after {
+  content: "";
+
+  display: block;
+  height: 3px;
+  width: 1.5rem;
+
+  border-radius: 1px;
+  transition: opacity 0.25s;
+  background-color: var(--vague-color);
+  opacity: 0.5;
+}
+
+.cBullet.cActive::after {
+  opacity: 1;
+}

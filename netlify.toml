@@ -1,0 +1,35 @@
+[dev]
+  command = "npm start"
+  publish = "dist"
+  port = 8080 
+
+[functions]
+  directory = 'server/functions/'
+  node_bundler = "esbuild"
+  included_files = ["server/data/*.json"]
+  
+[[redirects]]
+  from = "/api/books"
+  to = "/.netlify/functions/books"
+  status = 200
+
+[[redirects]]
+  from = "/api/sales"
+  to = "/.netlify/functions/sales"
+  status = 200
+
+[[redirects]]
+  from = "/api/login"
+  to = "/.netlify/functions/login"
+  status = 200
+
+[[redirects]]
+  from = "/api/register"
+  to = "/.netlify/functions/register"
+  status = 200
+
+[[redirects]]
+  from = "/api/check-user"
+  to = "/.netlify/functions/check-user"
+  status = 200
+

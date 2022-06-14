@@ -1,0 +1,88 @@
+.cCardContainer {
+  display: flex;
+  flex-direction: column-reverse;
+
+  border-radius: 3px;
+  border: 1px solid var(--vague-color);
+}
+
+@media screen and (min-width: 425px) {
+  .cCardContainer {
+    flex-direction: row;
+  }
+}
+
+.cCardContent {
+  padding: 1.5rem;
+
+  flex: 1;
+}
+
+.cCardImage {
+  padding: 0.5rem;
+
+  background-color: var(--vague-color);
+}
+
+@media screen and (min-width: 425px) {
+  .cCardImage {
+    max-width: 30rem;
+
+    flex: 1;
+  }
+}
+
+.cCardImage > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.cCardCategory {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: var(--secondary-text-color);
+}
+
+.cCardTitle {
+  margin: 0;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  color: var(--title-color);
+}
+
+.cCardAuthor {
+  margin-bottom: 0.25rem;
+
+  font-style: normal;
+
+  color: var(--accent-text-color);
+}
+
+.cCardCheckoutContainer {
+  display: flex;
+  align-items: center;
+}
+
+.cCardCurrency {
+  margin-right: 1rem;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cCardAddToCartButton {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

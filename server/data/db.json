@@ -1,0 +1,71 @@
+{
+  "books": [
+    {
+      "id": "f30396cb-fb98-4b7b-b7b6-a3f62539e4bc",
+      "title": "The Memory Police",
+      "author": "Yoko Ogawa",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1544335119l/37004370.jpg",
+      "price": 14.72,
+      "currency": "$",
+      "category": "Science Fiction > Dystopian",
+      "isbn13": 9781101911815,
+      "description": "On an unnamed island, objects are disappearing: first hats, then ribbons, birds, roses..."
+    },
+    {
+      "id": "a1080342-843b-49b1-92fa-c90e115a1627",
+      "title": "Rhinoceros and Other Plays",
+      "author": "Eugène Ionesco",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347454436l/323823.jpg",
+      "price": 16,
+      "currency": "$",
+      "category": "Plays > Theatre",
+      "publisher": "Grove Press",
+      "isbn13": 9780802130983,
+      "description": "A rhinoceros suddenly appears in a small town, tramping through its peaceful streets."
+    },
+    {
+      "id": "63d64d0a-6f7b-49b1-91be-2ef74aa5b477",
+      "title": "Memento Mori",
+      "author": "Muriel Spark",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348186701l/120158.jpg",
+      "price": 15.9,
+      "currency": "$",
+      "category": "Novels",
+      "isbn13": 9780811223041,
+      "publisher": "New Directions Publishing Corporation",
+      "description": "In late 1950s London, something uncanny besets a group of elderly friends."
+    },
+    {
+      "id": "98357068-95c3-4681-92d8-df5400866a64",
+      "title": "Atlas of AI",
+      "author": "Kate Crawford",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1603542518l/50131136._SX318_.jpg",
+      "price": 25.76,
+      "currency": "$",
+      "category": "Nonfiction > Technology",
+      "publisher": "Yale University Press",
+      "isbn13": 9780300209570,
+      "description": "The hidden costs of artificial intelligence--from natural resources and labor to privacy, equality, and freedom"
+    }
+  ],
+  "sales": [
+    {
+      "id": "114017f1-ca54-45fc-b920-fbbc163084ca",
+      "image": "http://web.archive.org/web/20220115182749im_/https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/168/original/Revol_Bookshop_heroboard_banner_%282%29.jpg?1641830183",
+      "uri": "https://bookshop.org"
+    },
+    {
+      "id": "2d473597-7b8c-44a8-a5d8-102951cd044a",
+      "image": "http://web.archive.org/web/20220105083249im_/https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/168/original/LastNightTelegraph_Desktop_2048x600_285942.jpg?1641224116",
+      "uri": "https://bookshop.org"
+    }
+  ],
+  "users": [
+    {
+      "id": "a36d465fc4a72137327a08bcdb628342c15ffd5fd0841d3439cda138091f90b1bdafb97b55e4e048360841c8ad89f85525e504f3ef300e6b432e1fcbe428b9d2fd37da1f5cd274235108177c1fd21a83378ed2112f8399beee22c75b7b08a7ba91bbb2751cf772c04f53f8944190cf8a5a3c5958d434af2ec1ad80a84b51142a0c2e64fd85f6ae97cff7a0497ee0386b8b0892b8a15dbda8a220aa06a3a5410d115f6f3a5ebeac771091038736fcf2ca96833d37082cf6eb62bd018301a838057bab61b9a30e7487849534aede1dd53130a0a545b77697b850bca8721f1a2651ae3cbc9919f8ce10930dcf41aba7c25d7217d42ec5ddb28dc3f29ab14d139597",
+      "email": "test@mail.com",
+      "password": "d3d685011d6a2f07a0ffe6fc0025265bc7235c511f2ab85a1e1d524c7c829f32"
+    }
+  ]
+}
+

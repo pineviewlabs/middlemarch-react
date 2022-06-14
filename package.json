@@ -1,0 +1,19 @@
+{
+  "name": "middlemarch-react",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "lowdb": "^3.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "wouter": "^2.7.5"
+  },
+  "devDependencies": {
+    "netlify-cli": "^10.4.0",
+    "vite": "^2.9.9"
+  }
+}

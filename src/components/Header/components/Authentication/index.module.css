@@ -1,0 +1,72 @@
+.cAccountContainer {
+  position: relative;
+}
+
+.cAccountLabel {
+  cursor: pointer;
+}
+
+.cAccountCheckbox {
+  position: absolute;
+
+  height: 0;
+  width: 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+  appearance: none;
+}
+
+.cAccountMenu {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-50%);
+
+  margin: 0;
+  padding: 0;
+  min-width: 10rem;
+
+  border-radius: 3px;
+  background-color: var(--light-color);
+  list-style-type: none;
+}
+
+.cAccountMenuLink {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+
+  font-size: 1rem;
+  text-align: start;
+  text-decoration: none;
+
+  transition: background-color 0.25s;
+
+  border: none;
+  border-radius: 3px;
+
+  color: var(--dark-color);
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.cAccountMenuLink:hover {
+  background-color: var(--vague-color);
+}
+
+.cAccountCheckbox:checked + ul {
+  display: block;
+}
+
+.cAccountMenuLinkDelimiter {
+  height: 1px;
+  margin: 0;
+
+  border: none;
+  background-color: var(--dark-color);
+}

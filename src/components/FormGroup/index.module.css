@@ -1,0 +1,14 @@
+.cFormGroup {
+  padding: 0;
+  border: none;
+}
+
+.cFormGroup + .cFormGroup {
+  margin-top: 1rem;
+}
+
+.cFormGroupTitle {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.3rem;
+}

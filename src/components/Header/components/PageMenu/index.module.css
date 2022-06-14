@@ -1,0 +1,95 @@
+.cMenuButton {
+  padding: 0.2rem 0.3rem;
+
+  border: none;
+  background-color: transparent;
+}
+
+.cMenuButton span {
+  display: block;
+
+  height: 2px;
+  width: 1.2rem;
+  margin-bottom: 0.2rem;
+
+  border-radius: 2px;
+  background-color: var(--light-color);
+}
+
+.cMenuButton::before,
+.cMenuButton::after {
+  content: "";
+
+  display: block;
+
+  height: 2px;
+  width: 1.2rem;
+
+  border-radius: 2px;
+  background-color: var(--light-color);
+}
+
+.cMenuButton::before {
+  margin-bottom: 0.2rem;
+}
+
+@media screen and (min-width: 640px) {
+  .cMenuButton {
+    display: none;
+  }
+}
+
+.cPageLinksContainer {
+  position: absolute;
+  left: 0;
+  bottom: calc(1rem - 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  margin: 0;
+  padding: 0.5rem 0;
+
+  opacity: 0;
+  background-color: var(--dark-color);
+
+  transition: transform 0.25s, opacity 0.25s;
+  transform: translateY(-5%);
+
+  pointer-events: none;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 640px) {
+  .cPageLinksContainer {
+    position: static;
+
+    justify-content: flex-start;
+
+    transform: unset;
+
+    opacity: unset;
+    pointer-events: all;
+  }
+}
+
+.cPageLinksContainer.cActive {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  pointer-events: all;
+}
+
+.cPageLinksContainer li + li {
+  margin-left: 1rem;
+}
+
+.cPageLink {
+  font-weight: 500;
+
+  color: var(--accent-text-color);
+  text-decoration: none;
+}

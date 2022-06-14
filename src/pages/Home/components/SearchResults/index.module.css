@@ -1,0 +1,22 @@
+.cSearchResultsContainer {
+  display: grid;
+  gap: 1rem;
+
+  margin: 0 1rem 3rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cSearchResultsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cSearchResultsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cNotFoundMessage {
+  text-align: center;
+}

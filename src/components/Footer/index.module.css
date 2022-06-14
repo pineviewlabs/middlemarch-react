@@ -1,0 +1,20 @@
+.cFooterContainer {
+  padding: 4rem 2rem;
+
+  text-align: center;
+  background-color: var(--dark-color);
+}
+
+.cSocialLink {
+  text-decoration: none;
+  color: var(--accent-text-color);
+}
+
+.cSocialLink + .cSocialLink {
+  margin-left: 1rem;
+}
+
+.cDisclaimer {
+  color: var(--vague-color);
+  opacity: 0.7;
+}

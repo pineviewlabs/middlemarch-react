@@ -1,0 +1,31 @@
+.cArrivalsTitle {
+  font-size: 3.5rem;
+
+  text-align: center;
+  color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 640px) {
+  .cArrivalsTitle {
+    font-size: 5rem;
+  }
+}
+
+.cArrivalsContainer {
+  display: grid;
+  gap: 1rem;
+
+  margin: 0 1rem 3rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cArrivalsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cArrivalsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

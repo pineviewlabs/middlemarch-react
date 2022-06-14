@@ -1,0 +1,61 @@
+.cFormField {
+  position: relative;
+}
+
+.cFormField:first-of-type {
+  border-radius: 3px 3px 0 0;
+}
+
+.cFormField:last-of-type {
+  border-radius: 0 0 3px 3px;
+}
+
+.cFormField + .cFormField {
+  border-top: 1px solid var(--vague-color);
+}
+
+.cFormField
+  :is(input[type="text"], input[type="email"], input[type="password"]) {
+  width: 100%;
+  padding: 0.6em;
+
+  font-size: 1.2rem;
+  line-height: 1;
+
+  color: var(--dark-color);
+  border-radius: inherit;
+  border: none;
+}
+
+.cFormField
+  :is(input[type="text"], input[type="email"], input[type="password"]):focus,
+.cFormField
+  :is(input[type="text"], input[type="email"], input[type="password"]):not(:placeholder-shown) {
+  padding-bottom: 0.175em;
+  padding-top: 1.025em;
+}
+
+.cFormField
+  :where(:is(input[type="text"], input[type="email"], input[type="password"]):focus, :is(input[type="text"], input[type="email"], input[type="password"]):not(:placeholder-shown))
+  + label {
+  opacity: 0.7;
+  transform: scale(0.8) translateY(-0.175em);
+}
+
+.cFormField label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  padding: 0.6em;
+
+  font-size: 1.2rem;
+  line-height: 1;
+
+  transform-origin: top left;
+  transition: opacity 0.2s, transform 0.2s;
+
+  pointer-events: none;
+  color: var(--dark-color);
+}
