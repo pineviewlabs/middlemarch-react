@@ -19,7 +19,7 @@ export default ({ book, className = "" }) => {
   const [, { add }] = useCart();
 
   return (
-    <div className={`${cCardContainer} ${className}`}>
+    <div data-book-id={book.id} className={`${cCardContainer} ${className}`}>
       <div className={cCardContent}>
         <strong className={cCardCategory}>{book.category}</strong>
         <h3 className={cCardTitle}>{book.title}</h3>
