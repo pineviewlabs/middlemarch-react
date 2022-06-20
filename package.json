@@ -21,6 +21,6 @@
     "netlify-cli": "^10.4.0",
     "nightwatch": "^2.2.1",
     "vite": "^2.9.9",
-    "vite-plugin-nightwatch": "file:../vite-plugin-nightwatch"
+    "vite-plugin-nightwatch": "^0.2.12"
   }
 }
