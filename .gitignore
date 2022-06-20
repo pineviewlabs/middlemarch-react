@@ -1,6 +1,9 @@
 .DS_Store
+.idea/
 .netlify/
 logs/
+dist/
+article/
 node_modules/
 tests_output/
 

@@ -2,8 +2,8 @@
   display: flex;
   align-items: stretch;
 
-  width: 100%;
-  height: 100%;
+  width: var(--icon-width, 100%);
+  height: var(--icon-height, 100%);
 }
 
 .cIcon > svg {

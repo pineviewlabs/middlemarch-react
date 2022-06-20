@@ -14,8 +14,18 @@ const IconNameComponent = {
   userAccountProfile: <UserAccountProfileIcon />,
 };
 
-export default ({ name, className = "", ...other }) => (
-  <span className={`${className} ${cIcon}`} {...other}>
+export default ({
+  name,
+  width = "100%",
+  height = width,
+  className = "",
+  ...other
+}) => (
+  <span
+    style={{ "--icon-width": width, "--icon-height": height }}
+    className={`${className} ${cIcon}`}
+    {...other}
+  >
     {IconNameComponent[name]}
   </span>
 );

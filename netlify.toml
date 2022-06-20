@@ -1,12 +1,15 @@
 [dev]
-  command = "npm start"
+  command = "npm run vite:start"
   publish = "dist"
   port = 8080 
 
+[build]
+  command = "npm run vite:build"
+  publish = "dist"
+
 [functions]
-  directory = 'server/functions/'
   node_bundler = "esbuild"
-  included_files = ["server/data/*.json"]
+  included_files = ["netlify/data/*.json"]
   
 [[redirects]]
   from = "/api/books"

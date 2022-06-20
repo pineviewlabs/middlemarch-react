@@ -48,7 +48,7 @@ export default () => {
           </li>
         ) : (
           <Fragment>
-            <li>
+            <li data-login-button>
               <Link className={cAccountMenuLink} href="/sign-in">
                 Sign-in
               </Link>
@@ -56,7 +56,7 @@ export default () => {
             <li>
               <hr className={cAccountMenuLinkDelimiter} />
             </li>
-            <li>
+            <li data-register-button>
               <Link className={cAccountMenuLink} href="/register">
                 Register
               </Link>

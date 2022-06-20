@@ -1,23 +1,26 @@
 {
   "name": "middlemarch-react",
-  "version": "0.0.1",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "test": "nightwatch --headless"
+    "test": "nightwatch",
+    "test:e2e": "nightwatch ./test/e2e",
+    "start": "netlify dev",
+    "vite:start": "vite",
+    "vite:build": "vite build",
+    "vite:preview": "vite preview"
   },
   "dependencies": {
     "lowdb": "^3.0.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "wouter": "^2.7.5"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^1.3.2",
     "chromedriver": "^102.0.0",
     "geckodriver": "^3.0.1",
     "netlify-cli": "^10.4.0",
-    "nightwatch": "^2.1.8",
+    "nightwatch": "^2.2.1",
     "vite": "^2.9.9",
-    "vite-plugin-nightwatch": "^0.2.12"
+    "vite-plugin-nightwatch": "file:../vite-plugin-nightwatch"
   }
 }

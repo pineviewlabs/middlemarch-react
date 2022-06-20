@@ -2,32 +2,26 @@ describe("New Arrivals Component Test", function () {
   let component;
 
   before(async () => {
-    component = await browser.mountReactComponent(
-      "/src/pages/Home/components/Arrivals/index.jsx",
-      {
-        mocks: {
-          "/api/books": {
-            type: "fetch",
-            body: {
-              books: [
-                {
-                  id: "article_identifier_sldkfjlkouw98",
-                  title: "The Memory Police",
-                  author: "Yoko Ogawa",
-                  image:
-                    "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1544335119l/37004370.jpg",
-                  price: 14.72,
-                  currency: "$",
-                  category: "Science Fiction > Dystopian",
-                  isbn13: 9781101911815,
-                  description:
-                    "On an unnamed island, objects are disappearing: first hats, then ribbons, birds, roses...",
-                },
-              ],
-            },
+    component = await browser.mockNetworkResponse("/api/books", {
+      body: JSON.stringify({
+        books: [
+          {
+            id: "article_identifier_sldkfjlkouw98",
+            title: "The Memory Police",
+            author: "Yoko Ogawa",
+            image:
+                "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1544335119l/37004370.jpg",
+            price: 14.72,
+            currency: "$",
+            category: "Science Fiction > Dystopian",
+            isbn13: 9781101911815,
+            description:
+                "On an unnamed island, objects are disappearing: first hats, then ribbons, birds, roses...",
           },
-        },
-      }
+        ],
+      })
+    }).mountReactComponent(
+        "/src/pages/Home/components/Arrivals/index.jsx"
     );
   });
 
@@ -40,7 +34,7 @@ describe("New Arrivals Component Test", function () {
   });
 
   it("logs the innerHTML property", async function (browser) {
-    const innerHTML = await browser.getElementProperty(component, "innerHTML");
+    await browser.getElementProperty(component, "innerHTML");
     browser.assert.textContains(component, "The Memory Police");
   });
 });

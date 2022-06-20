@@ -9,11 +9,11 @@ export default () => {
   const [books] = useBooks();
   const [search] = useSearch();
 
-  const mathcedBooks = books.filter(({ title }) => title.includes(search));
+  const matchedBooks = books.filter(({ title }) => title.includes(search));
 
-  return mathcedBooks.length > 0 ? (
+  return matchedBooks.length > 0 ? (
     <Grid>
-      {mathcedBooks.map((book) => (
+      {matchedBooks.map((book) => (
         <BookCard key={book.id} book={book} />
       ))}
     </Grid>

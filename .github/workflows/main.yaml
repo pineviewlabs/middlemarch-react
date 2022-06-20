@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - name: Run application
-        run: npx netlify dev
+      - name: Build and start application
+        run: npm start
       - name: Run Nightwatch tests
-        run: npm test
+        run: npm test:e2e
 

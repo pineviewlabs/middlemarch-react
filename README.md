@@ -7,7 +7,7 @@
 
 > This is a port of [the another great article](https://github.com/beatfactor/middlemarch) written specially for React users.
 
-Sample bookstore single page application built with React, serverless funcitons and running on Vite. Routing is implementated with [wouter](https://github.com/molefrog/wouter).
+Sample bookstore single page application built with React, serverless funcitons and running on Vite. Routing is implemented with [wouter](https://github.com/molefrog/wouter).
 
 Component testing and End-to-end testing written in [Nightwatch.js](https://nightwatchjs.org).
 
@@ -16,6 +16,14 @@ Full tutorial with step-by-step instructions available at:
 
 [labs.pineview.io/learn-how-to-build-test-and-deploy-a-single-page-app-with-vue-3-vite-and-pinia/](https://labs.pineview.io/learn-how-to-build-test-and-deploy-a-single-page-app-with-vue-3-vite-and-pinia/)
 -->
+
+### Local development
+
+1. Clone the repository.
+2. Install dependencies.
+3. Create a `.env` file according to the `.env.example`.
+4. Run the development server with `npx netlify dev`.
+5. Navigate to the automatically opened tab in the browser.
 
 ### Preview
 

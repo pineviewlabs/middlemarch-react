@@ -1,6 +1,11 @@
+import react from "@vitejs/plugin-react";
+import nightwatchPlugin from 'vite-plugin-nightwatch'
+
 export default {
-  esbuild: {
-    jsxFactory: "createElement",
-    jsxInject: `import { createElement } from "react"`,
+  optimizeDeps: {
+    include: ['react', 'react-dom/client']
   },
+  plugins: [react(), nightwatchPlugin({
+    componentType: 'react',
+  })],
 };
