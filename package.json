@@ -1,6 +1,7 @@
 {
   "name": "middlemarch-react",
   "scripts": {
+    "test": "npm run test:components; npm run test:e2e",
     "test:e2e": "nightwatch ./test/e2e",
     "test:components": "nightwatch ./test/component",
     "start": "netlify dev",

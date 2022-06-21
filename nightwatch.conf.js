@@ -15,7 +15,7 @@
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
-  src_folders: ["./test/component"],
+  src_folders: [],
 
   // See https://nightwatchjs.org/guide/working-with-page-objects/using-page-objects.html
   page_objects_path: ["node_modules/nightwatch/examples/pages/"],

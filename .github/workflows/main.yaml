@@ -20,7 +20,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - name: Build and start application
-        run: npm start
+        run: npm start &
+      - name: Wait until it starts
+        run: sleep 30s
       - name: Run Nightwatch tests
-        run: npm test:e2e
+        run: npm test
 
