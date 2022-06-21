@@ -1,8 +1,8 @@
 {
   "name": "middlemarch-react",
   "scripts": {
-    "test": "nightwatch",
     "test:e2e": "nightwatch ./test/e2e",
+    "test:components": "nightwatch ./test/component",
     "start": "netlify dev",
     "vite:start": "vite",
     "vite:build": "vite build",
