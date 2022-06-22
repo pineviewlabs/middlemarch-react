@@ -1,12 +1,17 @@
 .cArrivalsTitle {
-  font-size: 3.5rem;
+  margin: 2rem 0 1rem 0;
+
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 
   text-align: center;
+  text-transform: capitalize;
   color: var(--accent-text-color);
 }
 
 @media screen and (min-width: 640px) {
   .cArrivalsTitle {
-    font-size: 5rem;
+    font-size: 4.375rem;
   }
 }
