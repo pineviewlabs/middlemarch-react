@@ -2,8 +2,8 @@
 
 <!--
 [![Node.js CI](https://github.com/beatfactor/middlemarch/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/beatfactor/middlemarch/actions/workflows/node.js.yml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/16d2bbe4-6931-4e83-9fe5-6fd6e1688f2d/deploy-status)](https://app.netlify.com/sites/middlemarch/deploys)
 -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1320bedb-8765-41e7-9ce4-7601d2ee9fc7/deploy-status)](https://app.netlify.com/sites/middlemarch-react/deploys)
 
 > This is a port of [the another great article](https://github.com/beatfactor/middlemarch) written specially for React users.
 
