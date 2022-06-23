@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Icon from "../../../../components/icons/index.jsx";
+import { useTick } from "../../../../hooks/useTick.js";
 import { useSales } from "../../../../cache/sales.jsx";
 
 import {
@@ -18,6 +19,12 @@ import {
 export default () => {
   const [posters] = useSales();
   const [activePoster, setActivePoster] = useState(0);
+
+  const shouldTick = useTick(
+    () => setActivePoster((old) => (old >= posters.length - 1 ? 0 : old + 1)),
+    3000,
+    [posters]
+  );
 
   return (
     <section className={cSalesSection}>
@@ -41,19 +48,25 @@ export default () => {
       <div className={cNavigationButtons}>
         <button
           className={cNavigationButton}
-          onClick={() =>
-            activePoster > 0 ? setActivePoster((old) => old - 1) : null
-          }
+          onClick={() => {
+            shouldTick(false);
+            setActivePoster(
+              activePoster > 0 ? (old) => old - 1 : posters.length - 1
+            );
+            shouldTick(true);
+          }}
         >
           <Icon name="previousArrow" />
         </button>
         <button
           className={cNavigationButton}
-          onClick={() =>
-            posters.length - 1 > activePoster
-              ? setActivePoster((old) => old + 1)
-              : null
-          }
+          onClick={() => {
+            shouldTick(false);
+            setActivePoster(
+              posters.length - 1 > activePoster ? (old) => old + 1 : 0
+            );
+            shouldTick(true);
+          }}
         >
           <Icon name="nextArrow" />
         </button>
@@ -64,7 +77,11 @@ export default () => {
           <button
             key={id}
             className={`${cBullet} ${index === activePoster ? cActive : ""}`}
-            onClick={() => setActivePoster(index)}
+            onClick={() => {
+              shouldTick(false);
+              setActivePoster(index);
+              shouldTick(true);
+            }}
           ></button>
         ))}
       </div>
