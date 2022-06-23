@@ -4,7 +4,6 @@ import Icon from "../../../../components/icons/index.jsx";
 import { useBooks } from "../../../../cache/books.jsx";
 import { useSearch } from "../../../../cache/search.jsx";
 
-import middlemarchURI from "./middlemarch.png";
 import {
   cBlock,
   cTitle,
@@ -12,7 +11,7 @@ import {
   cSearchForm,
   cSearchInput,
   cSearchButton,
-  cPreviewImage,
+  cWithBackground,
 } from "./index.module.css";
 
 export default () => {
@@ -21,7 +20,11 @@ export default () => {
   const [search, setSearch] = useSearch();
 
   return (
-    <section className={`${cBlock} maximum-width`}>
+    <section
+      className={`${cBlock} ${
+        search.length === 0 ? cWithBackground : ""
+      } maximum-width`}
+    >
       <h1 className={cTitle}>Middlemarch</h1>
       <p className={cSubtitle}>Your nightly bookstore</p>
 
@@ -42,6 +45,9 @@ export default () => {
           aria-label="Search"
           className={cSearchInput}
           defaultValue={search}
+          onInput={({ currentTarget }) =>
+            currentTarget.value.length === 0 && setSearch("")
+          }
         />
         <datalist id={searchIdList}>
           {books.map(({ id, title }) => (
@@ -52,18 +58,6 @@ export default () => {
           <Icon name="search" />
         </button>
       </form>
-
-      {search.length === 0 ? (
-        <div>
-          <img
-            className={cPreviewImage}
-            src={middlemarchURI}
-            alt="The set of books"
-          />
-        </div>
-      ) : (
-        ""
-      )}
     </section>
   );
 };

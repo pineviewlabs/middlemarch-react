@@ -2,6 +2,15 @@
   padding-top: 3rem;
 }
 
+.cBlock.cWithBackground {
+  height: 100vh;
+
+  background-image: url(./middlemarch.png);
+  background-position: bottom center;
+  background-size: 1000px auto;
+  background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 640px) {
   .cBlock {
     padding-top: 5rem;
@@ -50,7 +59,7 @@
 
 @media screen and (min-width: 992px) {
   .cSearchForm {
-    max-width: 40%;
+    max-width: 50%;
   }
 }
 
@@ -84,6 +93,14 @@
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.cPreviewImageBlock {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2rem;
+}
+
 .cPreviewImage {
-  max-width: 100%;
+  width: 1000px;
+  object-fit: cover;
 }
