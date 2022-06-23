@@ -1,0 +1,8 @@
+.cClouds {
+  height: 100%;
+
+  background-image: url("./clouds-home.svg");
+  background-size: 2096px, 583px;
+  background-position: center calc(50vh - 100px);
+  background-repeat: no-repeat;
+}

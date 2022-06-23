@@ -4,12 +4,14 @@
 
   --main-color: #112933;
   --dark-color: #222;
+  --dark-color-rgb: 34 34 34;
   --light-color: #fff;
   --vague-color: #e9ecef;
   --default-text-color: #ccc;
   --accent-text-color: #e1bee7;
   --title-color: #f0ad4e;
   --secondary-text-color: #e6ee9c;
+  --dark-background-color: #0b212b;
 }
 
 * {
@@ -38,13 +40,20 @@ body {
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-
-  height: 100%;
   min-height: inherit;
 }
 
-#root > main {
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page main {
   flex: 1;
+}
+
+.maximum-width {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -7,6 +7,9 @@ import Header from "./components/Header/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import SignIn from "./pages/SignIn/index.jsx";
 import Register from "./pages/Register/index.jsx";
+import Parallax from "./components/Parallax/index.jsx";
+import StarsLayer from "./components/Parallax/components/StarsLayer/index.jsx";
+import CloudsLayer from "./components/Parallax/components/CloudsLayer/index.jsx";
 import UserProvider from "./cache/user.jsx";
 import CartProvider from "./cache/cart.jsx";
 import BooksProvider from "./cache/books.jsx";
@@ -22,26 +25,31 @@ export default () => (
         <SearchProvider>
           <BooksProvider>
             <SalesProvider>
-              <Header />
+              <Parallax className="page">
+                <Header />
 
-              <main>
-                <Switch>
-                  <Route path="/">
-                    <Home />
-                  </Route>
-                  <Route path="/cart">
-                    <Cart />
-                  </Route>
-                  <Route path="/sign-in">
-                    <SignIn />
-                  </Route>
-                  <Route path="/register">
-                    <Register />
-                  </Route>
-                </Switch>
-              </main>
+                <StarsLayer />
+                <CloudsLayer />
 
-              <Footer />
+                <main>
+                  <Switch>
+                    <Route path="/">
+                      <Home />
+                    </Route>
+                    <Route path="/cart">
+                      <Cart />
+                    </Route>
+                    <Route path="/sign-in">
+                      <SignIn />
+                    </Route>
+                    <Route path="/register">
+                      <Register />
+                    </Route>
+                  </Switch>
+                </main>
+
+                <Footer />
+              </Parallax>
             </SalesProvider>
           </BooksProvider>
         </SearchProvider>

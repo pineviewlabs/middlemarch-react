@@ -5,17 +5,13 @@
 
   padding: 0.5rem 1rem;
 
-  background-color: var(--dark-color);
+  background-color: rgb(var(--dark-color-rgb) / 0.9);
 }
 
 .cNavigationPanel {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  max-width: 1140px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .cActionsPanel {

@@ -1,3 +1,9 @@
+.cBlock {
+  display: flow-root;
+
+  background-color: var(--dark-background-color);
+}
+
 .cArrivalsTitle {
   margin: 2rem 0 1rem 0;
 

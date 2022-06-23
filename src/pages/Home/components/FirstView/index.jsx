@@ -6,6 +6,7 @@ import { useSearch } from "../../../../cache/search.jsx";
 
 import middlemarchURI from "./middlemarch.png";
 import {
+  cBlock,
   cTitle,
   cSubtitle,
   cSearchForm,
@@ -20,7 +21,7 @@ export default () => {
   const [search, setSearch] = useSearch();
 
   return (
-    <section>
+    <section className={`${cBlock} maximum-width`}>
       <h1 className={cTitle}>Middlemarch</h1>
       <p className={cSubtitle}>Your nightly bookstore</p>
 

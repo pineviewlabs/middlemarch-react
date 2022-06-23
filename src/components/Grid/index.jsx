@@ -1,3 +1,5 @@
 import { cGrid } from "./index.module.css";
 
-export default ({ children }) => <div className={cGrid}>{children}</div>;
+export default ({ className = "", children }) => (
+  <div className={`${cGrid} ${className}`}>{children}</div>
+);

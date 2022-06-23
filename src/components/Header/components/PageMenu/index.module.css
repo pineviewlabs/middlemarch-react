@@ -53,7 +53,6 @@
   padding: 0.5rem 0;
 
   opacity: 0;
-  background-color: var(--dark-color);
 
   transition: transform 0.25s, opacity 0.25s;
   transform: translateY(-5%);
@@ -81,6 +80,8 @@
   transform: translateY(0);
 
   pointer-events: all;
+
+  background-color: rgb(var(--dark-color-rgb) / 0.9);
 }
 
 .cPageLinksContainer li + li {
