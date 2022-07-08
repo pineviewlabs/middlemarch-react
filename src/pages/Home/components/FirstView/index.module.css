@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 640px) {
   .cBlock {
-    padding-top: 5rem;
+    padding-top: 7rem;
   }
 }
 
@@ -26,6 +26,7 @@
 
   text-align: center;
   color: var(--title-color);
+  text-shadow: 1px 1px 1px var(--dark-color);
 }
 
 @media screen and (min-width: 640px) {
@@ -53,13 +54,7 @@
 
 @media screen and (min-width: 640px) {
   .cSearchForm {
-    max-width: 60%;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .cSearchForm {
-    max-width: 50%;
+    max-width: 29rem;
   }
 }
 
@@ -72,7 +67,7 @@
   line-height: 1;
 
   color: var(--light-color);
-  background-color: transparent;
+  background-color: rgb(0 0 0 / 0.2);
   border: 1px solid var(--vague-color);
   border-radius: 25rem;
 }

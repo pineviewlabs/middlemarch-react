@@ -3,6 +3,6 @@
 
   background-image: url("./clouds-home.svg");
   background-size: 2096px, 583px;
-  background-position: center calc(50vh - 100px);
+  background-position: center 13vh;
   background-repeat: no-repeat;
 }
