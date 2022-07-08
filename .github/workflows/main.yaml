@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
+        
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -23,6 +24,8 @@ jobs:
         run: npm start &
       - name: Wait until it starts
         run: sleep 30s
+      - run: mkdir -p screens logs
+      - run: sudo apt-get install xvfb
       - name: Run Nightwatch tests
-        run: npm test
+        run: xvfb-run --auto-servernum npm test -- --env chrome
 
