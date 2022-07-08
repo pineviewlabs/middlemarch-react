@@ -20,12 +20,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - name: Build and start application
-        run: npm start &
-      - name: Wait until it starts
-        run: sleep 30s
+
       - run: mkdir -p screens logs
       - run: sudo apt-get install xvfb
-      - name: Run Nightwatch tests
-        run: xvfb-run --auto-servernum npm test -- --env chrome
+
+      - name: Run Nightwatch component tests
+        run: xvfb-run --auto-servernum npm test:components
+
+      - name: Build and start application
+        run: npm start &
+
+      - name: Wait until it starts
+        run: sleep 30s
+
+      - name: Run Nightwatch end-to-end tests
+        run: xvfb-run --auto-servernum npm test:e2e
 
