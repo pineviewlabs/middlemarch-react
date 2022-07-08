@@ -1,5 +1,5 @@
-import { StrictMode } from "react";
-import { Route, Switch } from "wouter";
+import { Fragment, StrictMode } from "react";
+import { Route, Switch, useLocation } from "wouter";
 
 import Home from "./pages/Home/index.jsx";
 import Cart from "./pages/Cart/index.jsx";
@@ -18,42 +18,49 @@ import SearchProvider from "./cache/search.jsx";
 
 import "./App.css";
 
-export default () => (
-  <StrictMode>
-    <UserProvider>
-      <CartProvider>
-        <SearchProvider>
-          <BooksProvider>
-            <SalesProvider>
-              <Parallax className="page">
-                <Header />
+export default () => {
+  const [location] = useLocation();
 
-                <StarsLayer />
-                <CloudsLayer />
+  return (
+    <StrictMode>
+      <UserProvider>
+        <CartProvider>
+          <SearchProvider>
+            <BooksProvider>
+              <SalesProvider>
+                <Parallax className="page">
+                  {location === "/" ? (
+                    <Fragment>
+                      <StarsLayer />
+                      <CloudsLayer />
+                    </Fragment>
+                  ) : null}
+                  <Header />
 
-                <main>
-                  <Switch>
-                    <Route path="/">
-                      <Home />
-                    </Route>
-                    <Route path="/cart">
-                      <Cart />
-                    </Route>
-                    <Route path="/sign-in">
-                      <SignIn />
-                    </Route>
-                    <Route path="/register">
-                      <Register />
-                    </Route>
-                  </Switch>
-                </main>
+                  <main>
+                    <Switch>
+                      <Route path="/">
+                        <Home />
+                      </Route>
+                      <Route path="/cart">
+                        <Cart />
+                      </Route>
+                      <Route path="/sign-in">
+                        <SignIn />
+                      </Route>
+                      <Route path="/register">
+                        <Register />
+                      </Route>
+                    </Switch>
+                  </main>
 
-                <Footer />
-              </Parallax>
-            </SalesProvider>
-          </BooksProvider>
-        </SearchProvider>
-      </CartProvider>
-    </UserProvider>
-  </StrictMode>
-);
+                  <Footer />
+                </Parallax>
+              </SalesProvider>
+            </BooksProvider>
+          </SearchProvider>
+        </CartProvider>
+      </UserProvider>
+    </StrictMode>
+  );
+};

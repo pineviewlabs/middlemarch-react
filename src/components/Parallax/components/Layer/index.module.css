@@ -5,7 +5,6 @@
   right: 0;
   bottom: 0;
 
-  transform-style: preserve-3d;
-
   z-index: -1;
+  transform-origin: left;
 }

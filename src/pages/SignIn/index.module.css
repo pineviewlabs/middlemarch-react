@@ -1,6 +1,8 @@
 .cForm {
   padding: 1rem;
-  max-width: 25rem;
+  max-width: 20.5rem;
+  margin-top: 280px;
+  margin-bottom: 200px;
 }
 
 @media screen and (min-width: 425px) {
@@ -18,13 +20,20 @@
 
 .cFormSignInButton {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.6rem;
   margin-top: 1rem;
 
-  font-size: 1rem;
+  font-size: 1.25rem;
 
-  background-color: var(--accent-text-color);
+  color: var(--light-color);
+  background-color: #0d6efd;
   cursor: pointer;
   border: none;
-  border-radius: 3px;
+  border-radius: 0.3em;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.cFormSignInButton:hover {
+  background-color: #0b5ed7;
 }

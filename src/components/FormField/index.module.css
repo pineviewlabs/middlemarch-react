@@ -17,7 +17,7 @@
 .cFormField
   :is(input[type="text"], input[type="email"], input[type="password"]) {
   width: 100%;
-  padding: 0.6em;
+  padding: 1rem 0.75rem;
 
   font-size: 1.2rem;
   line-height: 1;
@@ -31,15 +31,15 @@
   :is(input[type="text"], input[type="email"], input[type="password"]):focus,
 .cFormField
   :is(input[type="text"], input[type="email"], input[type="password"]):not(:placeholder-shown) {
-  padding-bottom: 0.175em;
-  padding-top: 1.025em;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .cFormField
   :where(:is(input[type="text"], input[type="email"], input[type="password"]):focus, :is(input[type="text"], input[type="email"], input[type="password"]):not(:placeholder-shown))
   + label {
   opacity: 0.7;
-  transform: scale(0.8) translateY(-0.175em);
+  transform: scale(0.85) translateY(-0.35em);
 }
 
 .cFormField label {
@@ -48,10 +48,10 @@
   left: 0;
 
   height: 100%;
-  padding: 0.6em;
+  padding: 1rem 0.75em;
 
-  font-size: 1.2rem;
-  line-height: 1;
+  font-size: 1rem;
+  line-height: 1.5;
 
   transform-origin: top left;
   transition: opacity 0.2s, transform 0.2s;

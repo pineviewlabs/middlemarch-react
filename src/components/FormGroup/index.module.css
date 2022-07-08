@@ -8,7 +8,11 @@
 }
 
 .cFormGroupTitle {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+
+  color: var(--accent-text-color);
 }
