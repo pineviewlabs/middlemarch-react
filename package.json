@@ -2,8 +2,8 @@
   "name": "middlemarch-react",
   "scripts": {
     "test": "npm run test:components; npm run test:e2e",
-    "test:e2e": "nightwatch ./tests/e2e",
-    "test:components": "nightwatch ./tests/component",
+    "test:e2e": "nightwatch ./tests/e2e --env chrome",
+    "test:components": "nightwatch ./tests/component --env chrome",
     "start": "netlify dev",
     "vite:start": "vite",
     "vite:build": "vite build",
