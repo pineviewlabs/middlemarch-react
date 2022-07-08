@@ -27,7 +27,7 @@ module.exports = {
   custom_assertions_path: "",
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/plugin-api.html
-  plugins: ["vite-plugin-nightwatch"],
+  plugins: ["@nightwatch/react"],
 
   // See https://nightwatchjs.org/guide/#external-globals
   globals_path: "",
@@ -37,7 +37,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: "http://localhost:3000",
+      launch_url: process.env.BASE_URL || 'http://localhost:3000',
 
       screenshots: {
         enabled: false,
