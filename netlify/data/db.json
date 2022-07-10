@@ -51,12 +51,12 @@
   "sales": [
     {
       "id": "114017f1-ca54-45fc-b920-fbbc163084ca",
-      "image": "http://web.archive.org/web/20220115182749im_/https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/168/original/Revol_Bookshop_heroboard_banner_%282%29.jpg?1641830183",
+      "image": "https://web.archive.org/web/20220115182749im_/https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/168/original/Revol_Bookshop_heroboard_banner_%282%29.jpg?1641830183",
       "uri": "https://bookshop.org"
     },
     {
       "id": "2d473597-7b8c-44a8-a5d8-102951cd044a",
-      "image": "http://web.archive.org/web/20220105083249im_/https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/168/original/LastNightTelegraph_Desktop_2048x600_285942.jpg?1641224116",
+      "image": "https://web.archive.org/web/20220105083249im_/https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/168/original/LastNightTelegraph_Desktop_2048x600_285942.jpg?1641224116",
       "uri": "https://bookshop.org"
     }
   ],
@@ -68,4 +68,3 @@
     }
   ]
 }
-

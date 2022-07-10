@@ -1,5 +1,4 @@
 import Icon from "../icons/index.jsx";
-import { useUser } from "../../cache/user.jsx";
 import { useCart } from "../../cache/cart.jsx";
 
 import {
@@ -15,7 +14,6 @@ import {
 } from "./index.module.css";
 
 export default ({ book, className = "" }) => {
-  const [user] = useUser();
   const [, { add }] = useCart();
 
   return (
@@ -27,13 +25,12 @@ export default ({ book, className = "" }) => {
         <p>{book.description}</p>
         <footer className={cCardCheckoutContainer}>
           <em className={cCardCurrency}>
-            {book.currency} {book.price}
+            {book.currency} {book.price.toFixed(2)}
           </em>
-          {user ? (
-            <button onClick={() => add(book)} className={cCardAddToCartButton}>
-              <Icon name="basket" />
-            </button>
-          ) : null}
+
+          <button onClick={() => add(book)} className={cCardAddToCartButton}>
+            <Icon name="basket" />
+          </button>
         </footer>
       </div>
 

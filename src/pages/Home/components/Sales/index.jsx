@@ -22,7 +22,7 @@ export default () => {
 
   const shouldTick = useTick(
     () => setActivePoster((old) => (old >= posters.length - 1 ? 0 : old + 1)),
-    3000,
+    10_000,
     [posters]
   );
 

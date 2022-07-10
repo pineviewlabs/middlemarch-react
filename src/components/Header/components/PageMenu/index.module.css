@@ -81,7 +81,7 @@
 
   pointer-events: all;
 
-  background-color: rgb(var(--dark-color-rgb) / 0.9);
+  background-color: #000c;
 }
 
 .cPageLinksContainer li + li {

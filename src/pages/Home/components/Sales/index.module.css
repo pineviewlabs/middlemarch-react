@@ -12,7 +12,7 @@
   width: max-content;
 
   transform: translateX(calc(-100vw * var(--active-poster-index, 0)));
-  transition: transform 0.3s;
+  transition: transform 1.5s;
 }
 
 .cSalesPosterContainer {
@@ -24,12 +24,6 @@
 
 .cSalesPoster {
   width: 100%;
-}
-
-@media screen and (min-width: 640px) {
-  .cSalesPoster {
-    width: 80%;
-  }
 }
 
 .cNavigationButtons {

@@ -52,6 +52,10 @@ body {
   flex: 1;
 }
 
+.page main.dark {
+  background-color: #111222;
+}
+
 .maximum-width {
   max-width: 1140px;
   margin-left: auto;

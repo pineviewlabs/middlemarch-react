@@ -1,6 +1,9 @@
 .cBlock {
   display: flow-root;
 
+  padding-left: 1rem;
+  padding-right: 1rem;
+
   background-color: var(--dark-background-color);
 }
 

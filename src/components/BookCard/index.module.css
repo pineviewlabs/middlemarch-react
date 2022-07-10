@@ -13,6 +13,9 @@
 }
 
 .cCardContent {
+  display: flex;
+  flex-direction: column;
+
   padding: 1.5rem;
 
   flex: 1;
@@ -66,7 +69,9 @@
 
 .cCardCheckoutContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+
+  flex: 1;
 }
 
 .cCardCurrency {

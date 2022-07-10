@@ -37,7 +37,7 @@ export default () => {
                   ) : null}
                   <Header />
 
-                  <main>
+                  <main className={location === "/cart" ? "dark" : ""}>
                     <Switch>
                       <Route path="/">
                         <Home />
