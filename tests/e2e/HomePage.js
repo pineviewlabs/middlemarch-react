@@ -8,7 +8,7 @@ describe("Homepage End-to-end Test", () => {
   });
 
   it("tests if anonymous user can try buy a book", (browser) => {
-    browser.assert.not.elementPresent('[data-book-id] button');
+    browser.assert.elementPresent("[data-book-id] button");
   });
 
   it("tests if anonymous user can try log in", (browser) => {
