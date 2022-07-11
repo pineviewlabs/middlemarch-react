@@ -20,12 +20,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-
       - run: mkdir -p screens logs
-      - run: sudo apt-get install xvfb
 
-#      - name: Run Nightwatch component tests
-#        run: xvfb-run --auto-servernum npm run test:components
+      - name: Run Nightwatch component tests
+        run: npm run test:components -- --headless
+
+      - run: sudo apt-get install xvfb
 
       - name: Build and start application
         run: npm start &
