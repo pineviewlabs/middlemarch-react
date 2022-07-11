@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <Link className={cBasketContainer} href="/cart">
-      <Icon name="basket" />
+      <Icon name="basket" width="28px" />
       <span className={cProductsCount}>{items.length}</span>
     </Link>
   );

@@ -30,7 +30,7 @@ export default () => {
   return (
     <div ref={accountMenuContainerRef} className={cAccountContainer}>
       <label className={cAccountLabel} htmlFor={accountDropdownId}>
-        <Icon name="userAccountProfile" />
+        <Icon name="userAccountProfile" width="24px" />
       </label>
       <input
         className={cAccountCheckbox}
