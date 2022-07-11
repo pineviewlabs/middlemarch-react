@@ -22,8 +22,8 @@ jobs:
       - run: npm ci
       - run: mkdir -p screens logs
 
-      - name: Run Nightwatch component tests
-        run: npm run test:components -- --headless
+#       - name: Run Nightwatch component tests
+#         run: npm run test:components -- --headless
 
       - run: sudo apt-get install xvfb
 
