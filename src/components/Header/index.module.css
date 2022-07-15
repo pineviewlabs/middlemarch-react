@@ -20,6 +20,12 @@
   margin-right: auto;
 }
 
+@media screen and (min-width: 1000px) {
+  .cNavigationPanel {
+    max-width: 1140px;
+  }
+}
+
 .cActionsPanel {
   display: flex;
   align-items: center;

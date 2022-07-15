@@ -35,6 +35,12 @@
   }
 }
 
+@media screen and (min-width: 500px) {
+  .cCardImage {
+    max-width: 12rem;
+  }
+}
+
 .cCardImage > img {
   width: 100%;
   height: 100%;
