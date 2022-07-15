@@ -81,9 +81,17 @@
   background-color: var(--light-color);
 }
 
-.cLightBlock.cPromoInfoTop {
+.cTopRounded {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.cBottomRounded {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.cLightBlock.cPromoCodeBlock {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 
   color: rgb(25 135 84);
@@ -104,17 +112,51 @@
   text-transform: uppercase;
 }
 
-.cLightBlock.cPromoInfoBottom {
+.cLightBlock.cPromoResult {
   margin-bottom: 1rem;
-
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
 
   color: var(--dark-color);
   background-color: #eee;
 }
 
-.cLightBlock.cPromoInfoBottom .cItemsPrice {
+.cItemsList {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: #eee;
+}
+
+.cItem {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  color: #6c757d;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.cItem .cBookInfo {
+  flex: 1;
+}
+
+.cBookInfo h6 {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  color: #212529;
+}
+
+.cItem small {
+  font-size: 0.875rem;
+}
+
+.cLightBlock.cPromoResult .cItemsPrice {
   font-weight: 700;
 }
 

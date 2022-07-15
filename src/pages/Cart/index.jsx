@@ -2,11 +2,14 @@ import Field from "./components/Field/index.jsx";
 import { useCart } from "../../cache/cart.jsx";
 
 import {
+  cItem,
   cTitle,
   cBlock,
   cContent,
+  cBookInfo,
   cCardPage,
   cMinOffset,
+  cItemsList,
   cPromoCode,
   cDelimiter,
   cPromoBlock,
@@ -14,19 +17,22 @@ import {
   cPromoTitle,
   cBlockTitle,
   cLightBlock,
+  cTopRounded,
   cItemsPrice,
   cRedeemBlock,
+  cPromoResult,
   cRedeemField,
   cEmptyMessage,
-  cPromoInfoTop,
+  cBottomRounded,
+  cPromoCodeBlock,
   cCheckoutButton,
-  cPromoInfoBottom,
   cPaymentBlockFields,
   cBillingBlockFields,
   cUserNamePrefixElement,
 } from "./index.module.css";
 
 export default () => {
+  const discount = 5;
   const [items] = useCart();
 
   return (
@@ -41,14 +47,32 @@ export default () => {
             <h4 className={cBlockTitle}>
               Your cart <span className={cItemsCount}>{items.length}</span>
             </h4>
-            <div className={`${cLightBlock} ${cPromoInfoTop}`}>
+            <ul className={`${cItemsList} ${cTopRounded}`}>
+              {items.map(({ book, quantity }) => (
+                <li key={book.id} className={cItem}>
+                  <div className={cBookInfo}>
+                    <h6>{book.title}</h6>
+                    <small>{book.author}</small>
+                  </div>
+                  <span>
+                    {quantity > 1 ? quantity + "x" : ""}&nbsp;
+                    {book.currency + book.price}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div
+              className={`${cLightBlock} ${cPromoCodeBlock} ${
+                items.length === 0 ? cTopRounded : ""
+              }`}
+            >
               <div>
                 <h6 className={cPromoTitle}>Promo code</h6>
                 <small className={cPromoCode}>examplecode</small>
               </div>
-              <span className={cPromoTitle}>-$5</span>
+              <span className={cPromoTitle}>-${discount}</span>
             </div>
-            <div className={`${cLightBlock} ${cPromoInfoBottom}`}>
+            <div className={`${cLightBlock} ${cPromoResult} ${cBottomRounded}`}>
               Total (USD)
               <span className={cItemsPrice}>
                 $
@@ -56,7 +80,7 @@ export default () => {
                   .reduce(
                     (sum, { book: { price }, quantity }) =>
                       sum + price * quantity,
-                    0
+                    -discount
                   )
                   .toFixed(2)}
               </span>
