@@ -28,6 +28,8 @@ export default () => {
           <SearchProvider>
             <BooksProvider>
               <SalesProvider>
+                <Header />
+
                 <Parallax className="page">
                   {location === "/" ? (
                     <Fragment>
@@ -35,7 +37,6 @@ export default () => {
                       <CloudsLayer />
                     </Fragment>
                   ) : null}
-                  <Header />
 
                   <main className={location === "/cart" ? "dark" : ""}>
                     <Switch>
