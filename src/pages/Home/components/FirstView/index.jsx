@@ -16,9 +16,7 @@ export default () => {
 
   return (
     <section
-      className={`${cBlock} ${
-        search.length === 0 ? cWithBackground : ""
-      } maximum-width`}
+      className={`${cBlock} ${search.length === 0 ? cWithBackground : ""}`}
     >
       <h1 className={cTitle}>Middlemarch</h1>
       <p className={cSubtitle}>Your nightly bookstore</p>

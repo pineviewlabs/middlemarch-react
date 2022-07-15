@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import Field from "./components/Field/index.jsx";
 import { useCart } from "../../cache/cart.jsx";
 
@@ -7,6 +5,7 @@ import {
   cTitle,
   cBlock,
   cContent,
+  cCardPage,
   cMinOffset,
   cPromoCode,
   cDelimiter,
@@ -31,7 +30,7 @@ export default () => {
   const [items] = useCart();
 
   return (
-    <Fragment>
+    <div className={cCardPage}>
       <h1 className={cTitle}>Checkout form</h1>
 
       {items.length === 0 ? (
@@ -133,6 +132,6 @@ export default () => {
           </div>
         </div>
       )}
-    </Fragment>
+    </div>
   );
 };

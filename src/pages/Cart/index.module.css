@@ -1,5 +1,15 @@
+.cCardPage {
+  height: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6rem;
+
+  background-color: #111222;
+}
+
 .cTitle {
-  margin: 6rem 1rem 3rem 1rem;
+  margin: 0 1rem 3rem 1rem;
 
   font-weight: 500;
 

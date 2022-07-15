@@ -2,7 +2,7 @@ import Grid from "../../../../components/Grid/index.jsx";
 import BookCard from "../../../../components/BookCard/index.jsx";
 import { useBooks } from "../../../../cache/books.jsx";
 
-import { cBlock, cArrivalsTitle } from "./index.module.css";
+import { cBlock, cGrid, cArrivalsTitle } from "./index.module.css";
 
 export default () => {
   const [books] = useBooks();
@@ -10,7 +10,7 @@ export default () => {
   return (
     <section className={cBlock}>
       <h2 className={cArrivalsTitle}>New arrivals</h2>
-      <Grid className="maximum-width">
+      <Grid className={cGrid}>
         {books.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}

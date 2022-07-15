@@ -31,14 +31,14 @@ export default () => {
                 <Header />
 
                 <Parallax className="page">
-                  {location === "/" ? (
+                  {location === "/" || location === "/cart" ? (
                     <Fragment>
                       <StarsLayer />
                       <CloudsLayer />
                     </Fragment>
                   ) : null}
 
-                  <main className={location === "/cart" ? "dark" : ""}>
+                  <main>
                     <Switch>
                       <Route path="/">
                         <Home />

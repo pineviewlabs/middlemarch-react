@@ -10,7 +10,7 @@ import {
 
 export default () => (
   <header className={cHeaderContainer}>
-    <nav className={`${cNavigationPanel} maximum-width`}>
+    <nav className={cNavigationPanel}>
       <PageMenu />
 
       <div className={cActionsPanel}>
